@@ -200,6 +200,7 @@ body {
   position: relative;
   border-radius: var(--radius-card);
   padding: 0;
+  animation: floatIn 0.45s ease both;
 }
 
 .card.is-matched {

@@ -21,6 +21,7 @@ const selectors = {
   confettiRoot: document.getElementById('confetti-root')
 };
 
+// Centralized state container reused across rounds
 const state = {
   deck: [],
   flipped: [],
@@ -224,6 +225,7 @@ function hydrateBestStats() {
   }
 }
 
+// Persists the personal best if the new run beats the stored benchmark
 function persistBestIfNeeded(current) {
   const best = getStoredBest();
   const isBetter = !best || current.moves < best.moves || (current.moves === best.moves && current.seconds < best.seconds);
@@ -245,6 +247,7 @@ function getStoredBest() {
   }
 }
 
+// Reveals every unmatched card briefly; can only be triggered once per round
 function handlePeek() {
   if (!state.peekAvailable || state.locked || state.flipped.length) return;
   state.peekAvailable = false;
