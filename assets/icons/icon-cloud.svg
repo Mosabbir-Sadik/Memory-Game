@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title>Cloud computing icon</title>
+  <defs>
+    <linearGradient id="gradCloud" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="#020a23" />
+  <path d="M84 70a14 14 0 0 0-4.3-9.9 16 16 0 0 0-22.8-20.4A18 18 0 0 0 36 60.2 12 12 0 0 0 38 84h42a14 14 0 0 0 4-14z" fill="url(#gradCloud)" />
+  <rect x="44" y="78" width="32" height="6" rx="3" fill="#a5f3fc" />
+</svg>
