@@ -231,10 +231,12 @@ body {
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-weight: 600;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border: 1px solid var(--card-border);
   background: var(--card-front);
   color: var(--text-muted);
   letter-spacing: 0.08em;
+  transition: opacity 0.35s ease;
 }
 
 .card__face--front::after {
@@ -247,6 +249,7 @@ body {
   border-color: rgba(255, 255, 255, 0.25);
   transform: rotateY(180deg);
   font-size: clamp(1.9rem, 4vw, 2.6rem);
+  opacity: 0;
 }
 
 .card__icon {
@@ -264,6 +267,17 @@ body {
 
 .card.is-matched .card__icon {
   transform: scale(1.05);
+}
+
+.card.is-flipped .card__face--front,
+.card.is-peek .card__face--front {
+  opacity: 0;
+}
+
+.card.is-flipped .card__face--back,
+.card.is-peek .card__face--back,
+.card.is-matched .card__face--back {
+  opacity: 1;
 }
 
 .card:focus-visible {
