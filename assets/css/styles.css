@@ -249,9 +249,21 @@ body {
   font-size: clamp(1.9rem, 4vw, 2.6rem);
 }
 
+.card__icon {
+  width: 65%;
+  max-width: 72px;
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+
 .card.is-matched .card__face--back {
   box-shadow: 0 15px 35px rgba(52, 211, 153, 0.25);
   color: var(--success);
+}
+
+.card.is-matched .card__icon {
+  transform: scale(1.05);
 }
 
 .card:focus-visible {

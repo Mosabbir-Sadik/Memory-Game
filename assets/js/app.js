@@ -1,5 +1,16 @@
 const TOTAL_PAIRS = 8;
-const ICON_POOL = ['C', 'C++', 'HTML', 'CSS', 'JS', 'PY', 'JAVA', 'SQL', 'RUST', 'GOLANG', 'AI', 'ML'];
+const ICON_POOL = [
+  { id: 'c', label: 'C language', src: 'assets/icons/icon-c.svg' },
+  { id: 'cpp', label: 'C++ language', src: 'assets/icons/icon-cpp.svg' },
+  { id: 'html', label: 'HTML5', src: 'assets/icons/icon-html.svg' },
+  { id: 'css', label: 'CSS3', src: 'assets/icons/icon-css.svg' },
+  { id: 'js', label: 'JavaScript', src: 'assets/icons/icon-js.svg' },
+  { id: 'python', label: 'Python', src: 'assets/icons/icon-python.svg' },
+  { id: 'java', label: 'Java', src: 'assets/icons/icon-java.svg' },
+  { id: 'sql', label: 'SQL databases', src: 'assets/icons/icon-sql.svg' },
+  { id: 'git', label: 'Git', src: 'assets/icons/icon-git.svg' },
+  { id: 'cloud', label: 'Cloud computing', src: 'assets/icons/icon-cloud.svg' }
+];
 const STORAGE_KEY = 'neon-memory-lab-best';
 
 const selectors = {
@@ -69,8 +80,10 @@ function buildDeck() {
   const icons = shuffle([...ICON_POOL]).slice(0, TOTAL_PAIRS);
   const doubled = [...icons, ...icons];
   return shuffle(doubled).map((icon, index) => ({
-    uid: `${icon}-${index}-${Math.random().toString(36).slice(2, 7)}`,
-    icon,
+    uid: `${icon.id}-${index}-${Math.random().toString(36).slice(2, 7)}`,
+    iconId: icon.id,
+    label: icon.label,
+    src: icon.src,
     matched: false,
     revealed: false
   }));
@@ -100,7 +113,11 @@ function createCardElement(card, index) {
 
   const back = document.createElement('span');
   back.className = 'card__face card__face--back';
-  back.textContent = card.icon;
+  const iconImg = document.createElement('img');
+  iconImg.src = card.src;
+  iconImg.alt = card.label;
+  iconImg.className = 'card__icon';
+  back.appendChild(iconImg);
 
   inner.append(front, back);
   button.appendChild(inner);
@@ -133,7 +150,7 @@ function handleCardClick(uid) {
 
 function evaluatePair() {
   const [first, second] = state.flipped;
-  if (first.icon === second.icon) {
+  if (first.iconId === second.iconId) {
     first.matched = true;
     second.matched = true;
     state.matches += 1;
