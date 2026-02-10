@@ -1,5 +1,5 @@
 const TOTAL_PAIRS = 8;
-const ICON_POOL = ['🜁', '🜂', '🜃', '🜄', '🜏', '🜔', '🜍', '🝔', '🝗', '🝑', '☼', '☾', '☽', '♢', '♤', '♧'];
+const ICON_POOL = ['C', 'C++', 'HTML', 'CSS', 'JS', 'PY', 'JAVA', 'SQL', 'RUST', 'GOLANG', 'AI', 'ML'];
 const STORAGE_KEY = 'neon-memory-lab-best';
 
 const selectors = {
