@@ -102,7 +102,7 @@ function createCardElement(card, index) {
   button.type = 'button';
   button.dataset.cardId = card.uid;
   button.setAttribute('aria-pressed', 'false');
-  button.setAttribute('aria-label', 'Hidden card');
+  button.setAttribute('aria-label', `Hidden ${card.label}`);
   button.style.animationDelay = `${index * 35}ms`;
 
   const inner = document.createElement('div');
