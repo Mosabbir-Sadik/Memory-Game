@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title>C language logo</title>
+  <defs>
+    <linearGradient id="gradC" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff9a3c" />
+      <stop offset="100%" stop-color="#ff4f81" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#gradC)" />
+  <circle cx="60" cy="60" r="32" fill="rgba(9, 10, 18, 0.28)" />
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-size="48" font-weight="700" fill="#fff" font-family="'Space Grotesk', 'Segoe UI', sans-serif">C</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title>C++ logo</title>
+  <defs>
+    <linearGradient id="gradCpp" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#5e7ffb" />
+      <stop offset="100%" stop-color="#8a5bff" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#gradCpp)" />
+  <path d="M38 60c0-12.7 9.3-22 22-22 6.2 0 11.8 2.3 15.5 6.3l-7.9 7c-1.9-2.3-4.6-3.6-7.6-3.6-6.6 0-11 4.8-11 12.3 0 7.6 4.4 12.3 11 12.3 3 0 5.7-1.3 7.6-3.6l7.9 7c-3.7 4.1-9.3 6.3-15.5 6.3-12.7 0-22-9.3-22-22z" fill="#fdfdfd" opacity="0.2" />
+  <text x="38" y="68" font-size="34" font-weight="700" fill="#fff" font-family="'Chivo Mono', 'Space Grotesk', 'Segoe UI', sans-serif">C</text>
+  <text x="63" y="68" font-size="28" font-weight="700" fill="#fff" font-family="'Chivo Mono', 'Space Grotesk', 'Segoe UI', sans-serif">++</text>
+</svg>
