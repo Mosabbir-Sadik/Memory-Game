@@ -237,7 +237,7 @@ body {
   letter-spacing: 0.08em;
 }
 
-.card__face::after {
+.card__face--front::after {
   content: "?";
 }
 
