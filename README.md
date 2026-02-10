@@ -6,6 +6,7 @@ A premium memory-match experience that pairs a tactile interface with smart stat
 - Responsive glassmorphism layout with animated aurora backdrop and purposeful typography
 - Vanilla JavaScript game engine with shuffling, match validation, timer, and local best tracking
 - One-time peek assist plus celebratory win modal and confetti burst
+- Custom SVG tile set inspired by core CSE stacks (C, C++, HTML, CSS, JS, Python, Java, SQL, Git, Cloud)
 - Accessible controls (keyboard focus states, ARIA labels) and reduced-motion safeguards
 
 ## Tech stack
